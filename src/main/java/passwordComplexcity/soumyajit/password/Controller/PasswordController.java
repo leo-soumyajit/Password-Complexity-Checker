@@ -41,7 +41,7 @@ public class PasswordController {
     @GetMapping("/pass-get")
     public ResponseEntity<String> getallPass(){
         if(lastpass!=null){
-            return ResponseEntity.ok("Last Submitted Password"+lastpass);
+            return ResponseEntity.ok("Last Submitted Password : " + lastpass);
         }
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body("No password has been submitted yet.");
     }
